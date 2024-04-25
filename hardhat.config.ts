@@ -10,8 +10,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const providerApiKey = process.env.ALCHEMY_API_KEY || "";
-const deployerPrivateKey =
-  process.env.PRIVATE_KEY ?? "";
+const deployerPrivateKey = process.env.PRIVATE_KEY ?? "";
 const etherscanApiKey = process.env.ETHERSCAN_API_KEY || "";
 
 const config: HardhatUserConfig = {
@@ -36,8 +35,8 @@ const config: HardhatUserConfig = {
       url: `https://base-mainnet.g.alchemy.com/v2/${providerApiKey}`,
       accounts: [deployerPrivateKey],
     },
-    baseGoerli: {
-      url: "https://goerli.base.org",
+    baseSepolia: {
+      url: "https://sepolia.base.org",
       accounts: [deployerPrivateKey],
     },
     mode: {
@@ -46,6 +45,10 @@ const config: HardhatUserConfig = {
     },
     modeSepolia: {
       url: "https://sepolia.mode.network",
+      accounts: [deployerPrivateKey],
+    },
+    scrollSepolia: {
+      url: "https://sepolia-rpc.scroll.io",
       accounts: [deployerPrivateKey],
     },
   },
