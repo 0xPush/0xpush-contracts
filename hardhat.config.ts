@@ -47,6 +47,10 @@ const config: HardhatUserConfig = {
       url: "https://sepolia.mode.network",
       accounts: [deployerPrivateKey],
     },
+    scroll: {
+      url: "https://scroll.drpc.org",
+      accounts: [deployerPrivateKey],
+    },
     scrollSepolia: {
       url: "https://sepolia-rpc.scroll.io",
       accounts: [deployerPrivateKey],
